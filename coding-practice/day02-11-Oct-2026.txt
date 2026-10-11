@@ -1,0 +1,108 @@
+* Ansible -Install  & Enable  Nginx 
+
+  - name: install and start nginx on pathnex
+
+  host: all
+  become: yes 
+
+  task:
+   - name: install nginx
+   yum:
+   name: nginx
+  state: present	
+
+   - name: enable nginx
+  service: 
+     name: nginx
+    state: started
+   enable: yes
+
+====================================================
+
+Terraform EC2 with tags
+                 provider "aws" {
+               region = "ap-south-1"
+             }
+             resource "aws_instance" "Pathenx EC2"  {
+               ami = "ami-0abcd1234abcd1234"
+      instance_type  = "r5.2xlarge"
+               tags = {
+       Name = "pathnex-Server"
+      Envirement = "Traning"
+     owner =  "Pathnex & Neeraj Team"
+} 
+}
+ 
+# Kubernetes — Deployment with 2 Replicas
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: pathnex-deployment
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: pathnex-app
+  template:
+    metadata:
+      labels:
+        app: pathnex-app
+    spec:
+      containers:
+        - name: app
+          image: nginx
+          ports:
+            - containerPort: 80
+
+
+🔹 Shell Script — Disk Usage
+#!/bin/bash
+df -h
+# Kubernetes — Deployment with 2 Replicas
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: pathnex-deployment
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: pathnex-app
+  template:
+    metadata:
+      labels:
+        app: pathnex-app
+    spec:
+      containers:
+        - name: app
+          image: nginx
+          ports:
+            - containerPort: 80
+
+
+🔹 Shell Script — Disk Usage
+#!/bin/bash
+df -h
+
+🔹 Docker
+# Docker Images & Containers
+docker pull ubuntu
+docker images
+docker ps -a
+
+# Docker File
+FROM ubuntu:22.04
+RUN apt update
+CMD ["echo", "Hello Pathnex"]🔹 Docker
+# Docker Images & Containers
+docker pull ubuntu
+docker images
+docker ps -a
+
+# Docker File
+FROM ubuntu:22.04
+RUN apt update
+CMD ["echo", "Hello Pathnex"]                                   
+                 
+
+
