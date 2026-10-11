@@ -3,4 +3,6 @@ Verry Good Evening
 I'm Sorry for not  praticing Git & Git Hub
 Today I'm Pusing the code 
 Today it  was 11th day of the Devops class 
-Where we went through with K8s
+Where we went through with K8
+
+I will practice daily.
